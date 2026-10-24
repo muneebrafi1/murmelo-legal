@@ -1,54 +1,120 @@
 <!doctype html>
+<!-- Murmelo · privacy page. Source: murmelo repo store/legal/privacy.html, published to github.com/muneebrafi1/murmelo-legal (https://muneebrafi1.github.io/murmelo-legal/privacy). Brand: logo D (docs/design/brand/D-ink-record). -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Murmelo — Privacy Policy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy Policy · Murmelo</title>
+<meta name="description" content="What Murmelo collects, who processes it, and how to delete it.">
+<link rel="icon" href="brand/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="brand/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="brand/apple-touch-icon.png">
+<meta name="theme-color" content="#F5F5F2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
 <style>
-  body{margin:0;background:#FAF9F5;color:#1F1E1D;font:17px/1.6 Georgia,'Times New Roman',serif}
-  .wrap{max-width:680px;margin:0 auto;padding:48px 24px 96px}
-  h1{font-size:34px;font-weight:500;margin:8px 0 4px}
-  h2{font-size:22px;font-weight:600;margin:36px 0 8px}
-  .mark{width:44px;height:44px;border-radius:50%;background:#D97757;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
-  .mark svg{display:block}
-  .muted{color:#8D897F;font-size:14px;font-family:-apple-system,Segoe UI,sans-serif}
-  ul{padding-left:22px}
-  a{color:#C25B41}
+  /* Facet tokens (docs/design/facet/facet.css). Brand: ink + paper, red only in the logo's dot. */
+  :root{--canvas:#F5F5F2;--card:#FFFFFF;--hair:#E4E4DF;--hair-strong:#D4D4CE;--fill-1:#F1F1ED;--ink:#141416;--ink-2:#5F5F65;--ink-3:#737379;--on-ink:#FFFFFF}
+  @media (prefers-color-scheme:dark){:root{--canvas:#000;--card:#151517;--hair:rgba(255,255,255,.08);--hair-strong:rgba(255,255,255,.18);--fill-1:#1C1C1F;--ink:#F5F5F7;--ink-2:#A3A3A9;--ink-3:#8C8C93;--on-ink:#141416}}
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--canvas);color:var(--ink);font:17px/1.55 -apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,"Segoe UI",Roboto,sans-serif;letter-spacing:-.2px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:640px;margin:0 auto;padding:calc(env(safe-area-inset-top) + 16px) 16px 48px}
+  .top{display:flex;align-items:center;height:56px;margin-bottom:24px}
+  .top a{display:block;line-height:0}
+  .top img{display:block;height:28px;width:auto}
+  h1{font-size:34px;line-height:41px;font-weight:700;letter-spacing:-.6px;margin:0 0 8px}
+  h2{font-size:22px;line-height:28px;font-weight:700;letter-spacing:-.35px;margin:44px 0 12px}
+  h3{font-size:17px;line-height:22px;font-weight:700;letter-spacing:-.3px;margin:0 0 4px}
+  .meta{color:var(--ink-2);font-size:15px;line-height:20px;margin:0 0 28px}
+  .lead{font-size:19px;line-height:1.5;margin:0 0 8px}
+  p{margin:0 0 14px}
+  ul{padding-left:20px;margin:0 0 14px} li{margin:8px 0} li::marker{color:var(--ink-3)}
+  a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--hair-strong);text-decoration-thickness:1.5px;text-underline-offset:3px}
+  a:hover{text-decoration-color:var(--ink)}
+  strong{font-weight:650}
+  .card{background:var(--card);border:1px solid var(--hair);border-radius:24px;padding:4px 20px;margin:12px 0 16px}
+  .row{padding:14px 0;border-top:1px solid var(--hair)} .row:first-child{border-top:0}
+  .row p{margin:0;color:var(--ink-2);font-size:15px;line-height:21px}
+  .row p + p{margin-top:4px}
+  .sub{color:var(--ink-3)}
+  .note{background:var(--fill-1);border-radius:14px;padding:14px 16px;font-size:15px;line-height:22px;color:var(--ink-2)}
+  .note p:last-child{margin:0}
+  .foot{margin-top:64px;padding-top:20px;border-top:1px solid var(--hair);display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between;align-items:center;color:var(--ink-3);font-size:14px}
+  .foot nav{display:flex;gap:20px}
+  .foot a{color:var(--ink-2);text-decoration:none;font-weight:600}
+  .foot a:hover,.foot a[aria-current]{color:var(--ink)}
 </style>
 </head>
-<body>
-<div class="wrap">
-  <div class="mark"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M7 10v4M12 6v12M17 10v4" stroke="#FFF9F2" stroke-width="2.6" stroke-linecap="round"/></svg></div>
-  <h1>Privacy Policy</h1>
-  <p class="muted">Murmelo — AI voice notes · Effective 16 July 2026</p>
+<body><div class="wrap">
+<header class="top"><a href="./" aria-label="Murmelo home"><picture><source srcset="brand/lockup-dark.svg" media="(prefers-color-scheme: dark)"><img src="brand/lockup.svg" alt="Murmelo" width="144" height="28"></picture></a></header>
+<main>
+<h1>Privacy Policy</h1>
+<p class="meta">Murmelo: AI Lecture Notes · Effective 24 October 2026</p>
+<p class="lead">Murmelo records your lectures and turns them into study notes. To do that it has to handle your recordings and notes. This page says, in plain words, what we collect, who helps us process it, and how you delete it.</p>
 
-  <p>Murmelo turns your voice into notes. To do that, it needs to handle your recordings with care. This page explains, in plain language, exactly what we collect and what we do with it.</p>
+<h2>What we collect</h2>
+<ul>
+  <li><strong>An account ID.</strong> Murmelo creates a random account on first launch. You don't need a name, email or phone number.</li>
+  <li><strong>If you choose Back up with Apple:</strong> Apple gives us an identifier for your Apple Account and, if you allow it, your name and email (Apple may give a private relay address instead).</li>
+  <li><strong>What you record and add:</strong> lecture audio you record or import (including the sound of a video file you import), PDFs, slides, Word and text files, photos (of the board, scanned pages, photos you pick) and links you paste.</li>
+  <li><strong>What Murmelo makes from it:</strong> transcripts, notes, quizzes, flashcards, translations, rewrites, spoken audio recaps, and answers to your questions.</li>
+  <li><strong>What you set up and do in the app:</strong> courses, class times, rooms and exam dates; moments you mark while recording; quiz results and revision progress; questions you ask; thumbs up or down on a note and anything you write with it; quiz questions you report.</li>
+  <li><strong>Your plan:</strong> whether you have Murmelo Pro and its trial and renewal dates, from Apple through RevenueCat. We never see your card details.</li>
+  <li><strong>Notifications:</strong> a push token for your phone, so we can tell you when a note is ready.</li>
+  <li><strong>Usage counters:</strong> which AI features you used and when, so we can keep fair hourly limits and watch our costs.</li>
+</ul>
+<p>Some things stay on your phone and are never sent to us: your answers to the setup questions (field of study and year), your recent searches, and the schedule of your reminders.</p>
 
-  <h2>What we collect</h2>
-  <ul>
-    <li><strong>Your recordings</strong> — the audio you record or upload, stored encrypted in our cloud (Supabase, hosted on AWS in Mumbai) so your notes sync and survive a lost phone.</li>
-    <li><strong>Transcripts and summaries</strong> — the text our AI produces from your audio, stored the same way.</li>
-    <li><strong>An anonymous account</strong> — Murmelo creates a random account identifier on first launch. We do not require or collect your name, email, or phone number.</li>
-    <li><strong>Basic usage counters</strong> — for example, how many free notes you have used.</li>
-  </ul>
+<h2>What we use it for</h2>
+<p>Only to run Murmelo for you: to transcribe and write your notes, build your study tools, answer your questions, sync your library, send the reminders you turned on, check your plan, and keep the service working and affordable. We read thumbs-down feedback and reported quiz questions to improve the notes.</p>
+<p><strong>No ads. No tracking</strong> across other apps or websites. We never sell your data.</p>
 
-  <h2>Who processes your audio</h2>
-  <p>To transcribe and summarize, your audio and transcripts are sent to two processors: <strong>AssemblyAI</strong> (speech-to-text) and <strong>OpenAI</strong> (summaries and note chat). They process your data to provide the service and do not use it to train their models under the API terms we use. Your notes are never sold, and we show no ads.</p>
-
-  <h2>Who can see your notes</h2>
-  <p>Only you. Every note is protected by row-level security tied to your account. Murmelo staff (that's one person) does not read your notes. Notes leave the app only when you tap Share.</p>
-
-  <h2>Deleting your data</h2>
-  <p>Delete any note from the note's menu — the audio file, transcript, and summary are removed from our servers. To erase everything, use <em>Settings → Delete my data</em> inside the app. Both are immediate and permanent.</p>
-
-  <h2>Payments</h2>
-  <p>Subscriptions are handled by Apple through your App Store account. We never see your card details.</p>
-
-  <h2>Voice data consent</h2>
-  <p>By recording with Murmelo you consent to your voice being processed as described above. Please make sure you have the agreement of other people you record — laws about recording conversations vary by country.</p>
-
-  <h2>Changes & contact</h2>
-  <p>If this policy changes materially, the app will tell you. Questions or requests: <a href="mailto:muneebrafishakoor@gmail.com">muneebrafishakoor@gmail.com</a>.</p>
+<h2>Who processes it for us</h2>
+<div class="card">
+  <div class="row"><h3>Supabase</h3><p>Database, file storage and server functions, hosted on AWS in Mumbai, India.</p><p class="sub">Receives everything you sync.</p></div>
+  <div class="row"><h3>AssemblyAI</h3><p>Speech to text.</p><p class="sub">Receives your lecture audio.</p></div>
+  <div class="row"><h3>OpenAI</h3><p>Writes notes, quizzes, flashcards, translations, rewrites and answers; builds the search index; voices the audio recaps; reads photos of the board, scanned pages and PDFs.</p><p class="sub">Receives transcripts, your notes and files, photos and your questions.</p></div>
+  <div class="row"><h3>RevenueCat</h3><p>Subscription status.</p><p class="sub">Receives your account ID and your App Store purchases.</p></div>
+  <div class="row"><h3>Apple</h3><p>App Store payments, Sign in with Apple, push notifications.</p><p class="sub">Receives what each of those needs.</p></div>
+  <div class="row"><h3>Expo</h3><p>Delivers push notifications.</p><p class="sub">Receives your push token and the notification text.</p></div>
+  <div class="row"><h3>Supadata</h3><p>Reads the public captions of a YouTube link you paste.</p><p class="sub">Receives the video link only.</p></div>
 </div>
-</body>
+<p>These services process your data to provide Murmelo. Your data is stored in India (Supabase) and may be processed in the United States (AssemblyAI and OpenAI).</p>
+
+<h2>Is your data used to train AI?</h2>
+<p><strong>Murmelo does not train AI models on your data.</strong> What our two AI providers say about their own models:</p>
+<ul>
+  <li><strong>OpenAI</strong> says that data sent through its API is not used to train or improve its models unless the developer explicitly opts in. It keeps API data for up to 30 days to check for abuse, unless the law requires longer. A PDF that OpenAI reads for us is deleted from OpenAI as soon as it has been read. Source: <a href="https://developers.openai.com/api/docs/guides/your-data">OpenAI, “Data controls in the OpenAI platform”</a>.</li>
+  <li><strong>AssemblyAI</strong> says that, unless a customer opts out or uses its European servers, it may use some of the audio files it receives to train its models, after a process designed to remove personal information. Murmelo uses AssemblyAI's standard US service, so your recordings may be included. By default AssemblyAI deletes uploaded audio within 48 hours and transcripts after 30 days; deleting your account asks it to erase your transcripts straight away. Sources: <a href="https://www.assemblyai.com/docs/data-retention-and-model-training">AssemblyAI, “Data retention and model training”</a> and <a href="https://www.assemblyai.com/docs/faq/how-to-opt-out-of-data-sharing-for-our-model-improvement-program">its opt-out FAQ</a>.</li>
+</ul>
+
+<h2>Who can see your notes</h2>
+<p>Only you. Every note is tied to your account, and the database only gives it to you. If you create a share link for a note, anyone with that link can read that note's written notes (never the audio or the transcript). Turn the link off in the note's menu and it stops working.</p>
+
+<h2>Keeping and deleting your data</h2>
+<ul>
+  <li>Your notes stay until you delete them.</li>
+  <li>Deleting a note moves it to Recently deleted. After 30 days it is deleted for good, with its audio and files.</li>
+  <li><strong>Settings → Delete account</strong> deletes your account, recordings, files, notes and courses from our servers at once, and asks AssemblyAI to erase your transcripts. It can't be undone. Usage counters are kept without any link to you.</li>
+  <li>Your App Store subscription is separate: cancel it in Settings → Manage or cancel. Apple and RevenueCat keep their own purchase records under their own policies.</li>
+</ul>
+
+<h2>Security</h2>
+<p>Data travels over encrypted connections and is stored encrypted. Recordings are saved on your phone first and uploaded when you have a connection.</p>
+
+<h2>Recording other people</h2>
+<p>Lectures include other voices. Follow your university's rules and the law where you are, and ask before you record someone when that is required.</p>
+
+<h2>Children</h2>
+<p>Murmelo is made for students in higher education. It is not directed to children under 13, and we do not knowingly collect their data.</p>
+
+<h2>Your choices and rights</h2>
+<p>You can export your notes (PDF, Word, flashcards), edit them, and delete any of them or your whole account in the app. For anything else, including a copy of your data, write to us. If you live in the EU or the UK you also have the right to complain to your data protection authority.</p>
+
+<h2>Changes and contact</h2>
+<p>If this policy changes in a way that matters, Murmelo will tell you in the app. Questions or requests: <a href="mailto:muneebrafishakoor@gmail.com">muneebrafishakoor@gmail.com</a> · Muneeb Rafi, the developer of Murmelo.</p>
+</main>
+<footer class="foot"><nav aria-label="Legal"><a href="./privacy" aria-current="page">Privacy</a><a href="./terms">Terms</a><a href="./support">Support</a></nav><span>© 2026 Muneeb Rafi</span></footer>
+</div></body>
 </html>
