@@ -71,7 +71,7 @@
     <div class="eyebrow" style="margin-bottom:10px">How it works</div>
     <ol>
       <li>Install Murmelo on your iPhone and open it.</li>
-      <li>Tap <strong>Open Murmelo</strong> above — or go to <strong>Invite friends → Got a code?</strong> and paste the code.</li>
+      <li id="step2">Tap <strong>Open Murmelo</strong> above — or go to <strong>Invite friends → Got a code?</strong> and paste the code.</li>
       <li>You both get 7 days of Murmelo Pro.</li>
     </ol>
     <p class="muted" style="margin:12px 0 0">One code per account. Your own code can’t be used on yourself.</p>
@@ -84,7 +84,11 @@
   'use strict';
   var raw = new URLSearchParams(location.search).get('c') || '';
   var code = raw.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 12);
-  if (code.length < 4) { document.getElementById('noCode').hidden = false; return; }
+  if (code.length < 4) {
+    document.getElementById('noCode').hidden = false;
+    document.getElementById('step2').innerHTML = 'In Murmelo, go to <strong>Settings → Invite friends → Got a code?</strong> and paste your friend’s code.';
+    return;
+  }
   document.getElementById('codeCard').hidden = false;
   document.getElementById('code').textContent = code;
   document.title = 'Invite code ' + code + ' · Murmelo';
